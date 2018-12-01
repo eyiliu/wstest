@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<style> /* set the CSS */
+
+  body { font: 12px Arial;}
+
+  path { 
+      stroke: steelblue;
+      stroke-width: 2;
+      fill: none;
+  }
+
+  .axis path,
+  .axis line {
+      fill: none;
+      stroke: grey;
+      stroke-width: 1;
+      shape-rendering: crispEdges;
+  }
+
+</style>
+
+<head>
+ <meta charset=utf-8 http-equiv="Content-Language" content="en"/>
+ <link rel="stylesheet" type="text/css" href="test.css"/>
+ <script src="/d3.v3.min.js"></script>
+
+ <title>Minimal Websocket test app</title>
+</head>
+
+<body>
+<header></header>
+<article>
+
+  
+<table><tr><td>
+
+<table width=600px>
+</table>
+</td></tr>
+<tr><td colspan=2>
+<div class="tabs">
+   <div class="tab">
+       <input type="radio" id="tab-1" name="tab-group-1" checked>
+       <label for="tab-1">Dumb Increment Demo</label>
+       
+       <div class="content">
+        <div id="dumb" class="group2">
+         <table>
+          <tr>
+	   <td id=wsdi_statustd align=center class="wsstatus">
+	     <span id=wsdi_status>Websocket connection not initialized
+	     	</span></td>
+           <td><span class="title">dumb increment-protocol</span></td>
+	   </tr>
+	   <tr>
+	   <td class="explain" colspan=2>
+             The incrementing number is coming from the server at 20Hz and is individual for
+             each connection to the server... try opening a second browser window.
+             <br/><br/>
+             The button sends a message over the websocket link to ask the server
+             to zero just this connection's number.
+	   </td>
+	  </tr>
+	   <tr>
+	    <td align=center><div id=number class="bigger"> </div></td>
+	    <td align=center>
+	     <input type=button id=offset value="Reset counter">
+	     <input type=button id=junk value="Send junk">
+	    </td>
+	    </tr>
+	 </table>
+	</div>
+       </div> 
+   </div>
+   
+</div>
+</td></tr></table>
+
+<div id="bar-chart">
+</div>
+<div id="indata">
+</div>
+
+<p id="demo"></p>
+
+<p id="demo_svg"></p>
+
+</article>
+
+</body>
+
+
+ <script type='text/javascript' src='test.js'></script>
+
+</html>
